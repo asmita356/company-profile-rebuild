@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Northwind Supply Co. — Company Profile | DataGraph</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="site-header__inner">
+    <a class="logo" href="#top">DataGraph</a>
+    <nav class="primary-nav" aria-label="Primary">
+      <a href="#top">Products</a>
+      <a href="#top">Solutions</a>
+      <a href="#top">Our Data</a>
+      <a href="#top">Resources</a>
+      <a href="#top">Pricing</a>
+    </nav>
+    <div class="site-header__actions">
+      <button class="icon-btn" aria-label="Search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <a class="btn btn--ghost" href="#top">Log In</a>
+      <a class="btn btn--primary" href="#top">Sign Up Free</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__id">
+        <div class="hero__logo" aria-hidden="true">NS</div>
+        <div>
+          <h1>Northwind Supply Co.</h1>
+          <p class="hero__meta">Industrial Equipment Retail &nbsp;·&nbsp; Portland, United States &nbsp;·&nbsp; 5K+ Employees</p>
+        </div>
+      </div>
+      <a class="btn btn--primary btn--lg" href="#top">View Company Info for Free</a>
+    </div>
+  </section>
+
+  
+  <section class="section container">
+    <h2 class="section__title">Overview</h2>
+    <div class="overview-grid">
+
+      <!-- facts card -->
+      <div class="card overview-facts">
+        <dl class="fact-list">
+          <div class="fact">
+            <dt>Headquarters</dt>
+            <dd>1420 Industrial Way, Portland, Oregon, 97...</dd>
+          </div>
+          <div class="fact">
+            <dt>Phone Number</dt>
+            <dd>(503) 555-0142</dd>
+          </div>
+          <div class="fact">
+            <dt>Website</dt>
+            <dd><a href="#top">www.northwindsupply.example</a></dd>
+          </div>
+          <div class="fact">
+            <dt>Revenue</dt>
+            <dd>$412.6 Million</dd>
+          </div>
+          <div class="fact">
+            <dt>Stock Symbol</dt>
+            <dd>NWSC</dd>
+          </div>
+          <div class="fact fact--wide">
+            <dt>Industry</dt>
+            <dd class="tag-list" id="industryTags">
+              <span class="tag">Industrial Equipment</span>
+              <span class="tag">Wholesale</span>
+              <span class="tag">Logistics</span>
+              <span class="tag">Software</span>
+              <span class="tag tag--extra">Safety Supplies</span>
+              <span class="tag tag--extra">Fleet Services</span>
+              <span class="tag tag--extra">Warehousing</span>
+            </dd>
+          </div>
+        </dl>
+        <button class="link-btn" id="toggleTags" aria-expanded="false">Show more</button>
+      </div>
+
+      <div class="card overview-signal">
+        <div class="signal-head">
+          <div class="rank-badge">
+            <span class="rank-badge__label">DG Rank</span>
+            <span class="rank-badge__value">31</span>
+            <svg class="rank-badge__arrow rank-badge__arrow--down" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+          </div>
+          <div class="view-toggle" role="tablist" aria-label="Signal view">
+            <button class="view-toggle__btn is-active" data-view="chart" role="tab" aria-selected="true">Chart</button>
+            <button class="view-toggle__btn" data-view="table" role="tab" aria-selected="false">Table</button>
+          </div>
+        </div>
+
+        <div class="signal-view" data-view-panel="chart">
+          <div class="bar-chart" aria-hidden="true">
+            <div class="bar-chart__bar" style="--v:37"><span></span></div>
+            <div class="bar-chart__bar" style="--v:23"><span></span></div>
+            <div class="bar-chart__bar" style="--v:13"><span></span></div>
+            <div class="bar-chart__bar" style="--v:32"><span></span></div>
+            <div class="bar-chart__bar" style="--v:49"><span></span></div>
+            <div class="bar-chart__bar" style="--v:31"><span></span></div>
+          </div>
+          <div class="bar-chart__labels">
+            <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span>
+          </div>
+        </div>
+
+        <div class="signal-view" data-view-panel="table" hidden>
+          <table class="mini-table">
+            <thead><tr><th>Month</th><th>DG Rank</th></tr></thead>
+            <tbody>
+              <tr><td>Jan</td><td>37</td></tr>
+              <tr><td>Feb</td><td>23</td></tr>
+              <tr><td>Mar</td><td>13</td></tr>
+              <tr><td>Apr</td><td>32</td></tr>
+              <tr><td>May</td><td>49</td></tr>
+              <tr><td>Jun</td><td>31</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="summary-grid">
+      <div class="card summary-card">
+        <h2 class="section__title section__title--tight">Northwind Supply Co.'s Company Summary</h2>
+        <p>Founded in 1988 and headquartered in Portland, Oregon, Northwind Supply Co. is a distributor of industrial equipment and safety supplies serving manufacturing, construction, and logistics customers across North America. The company operates a network of regional distribution centers alongside a growing digital ordering platform.</p>
+        <p class="summary-card__muted">Placeholder summary for layout demonstration only — not sourced from any real company.</p>
+      </div>
+      <aside class="card summary-cta">
+        <p class="summary-cta__eyebrow">AI for GTM</p>
+        <h3>Explore GTM</h3>
+        <p>See how teams use signal data to prioritize accounts.</p>
+        <a class="btn btn--primary" href="#top">Learn More</a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="tabs-section">
+    <div class="tabs-bar" id="tabsBar">
+      <div class="container tabs-bar__inner" role="tablist" aria-label="Company sections">
+        <button class="tab-btn is-active" data-tab="about" role="tab" aria-selected="true" aria-controls="panel-about" id="tab-about">About</button>
+        <button class="tab-btn" data-tab="org" role="tab" aria-selected="false" aria-controls="panel-org" id="tab-org">Org Chart</button>
+        <button class="tab-btn" data-tab="similar" role="tab" aria-selected="false" aria-controls="panel-similar" id="tab-similar">Similar Companies</button>
+        <button class="tab-btn" data-tab="insights" role="tab" aria-selected="false" aria-controls="panel-insights" id="tab-insights">Company Insights</button>
+        <button class="tab-btn" data-tab="news" role="tab" aria-selected="false" aria-controls="panel-news" id="tab-news">News & Media</button>
+      </div>
+    </div>
+
+    <div class="container">
+
+     
+      <div class="tab-panel is-active" id="panel-about" role="tabpanel" aria-labelledby="tab-about">
+        <div class="about-grid">
+          <div class="card">
+            <h2 class="section__title section__title--tight">About Northwind Supply Co.</h2>
+            <p class="clamp-text" id="aboutText">
+              Northwind Supply Co. distributes industrial equipment, tooling, and safety supplies to manufacturing and construction businesses across the western United States. The company's catalog spans power tools, fasteners, protective equipment, and fleet maintenance parts, delivered through regional warehouses and a same-week shipping guarantee. Northwind also operates a managed-inventory program for enterprise accounts, and a consulting arm that helps clients standardize procurement across multiple facilities. In recent years the company has invested heavily in a self-serve ordering portal and route-optimized delivery fleet, aiming to reduce average fulfillment time for repeat industrial customers.
+            </p>
+            <button class="link-btn" id="toggleAbout" aria-expanded="false">Explore more</button>
+
+            <div class="social-row">
+              <span class="social-row__label">Northwind's Social Media</span>
+              <a href="#top" aria-label="LinkedIn" class="social-icon">in</a>
+              <a href="#top" aria-label="X / Twitter" class="social-icon">X</a>
+              <a href="#top" aria-label="Facebook" class="social-icon">f</a>
+            </div>
+          </div>
+
+          <div class="card popular-searches">
+            <h3 class="card__label">Popular Searches</h3>
+            <ul class="chip-list" id="searchChips">
+              <li>Northwind Supply</li>
+              <li>Northwind Supply Co</li>
+              <li>Northwind Industrial</li>
+              <li class="chip-list__extra">Northwind Supply Inc</li>
+              <li class="chip-list__extra">NWSC Distribution</li>
+              <li class="chip-list__extra">SIC Code 50, 508</li>
+            </ul>
+            <button class="link-btn" id="toggleChips" aria-expanded="false">Show more</button>
+          </div>
+        </div>
+      </div>
+
+   
+      <div class="tab-panel" id="panel-org" role="tabpanel" aria-labelledby="tab-org" hidden>
+        <div class="panel-head">
+          <h2 class="section__title section__title--tight">Northwind Supply Co. Org Chart</h2>
+          <a class="link-btn" href="#top">View Full Org Chart</a>
+        </div>
+        <div class="org-scroll">
+          <div class="org-card" v-for="1">
+            <div class="org-card__avatar">JR</div>
+            <p class="org-card__name">Jordan Reyes</p>
+            <p class="org-card__title">Chief Financial Officer</p>
+            <div class="org-card__actions"><button>Phone</button><button>Email</button></div>
+          </div>
+          <div class="org-card">
+            <div class="org-card__avatar">CL</div>
+            <p class="org-card__name">Casey Lin</p>
+            <p class="org-card__title">Chief Operating Officer</p>
+            <div class="org-card__actions"><button>Phone</button><button>Email</button></div>
+          </div>
+          <div class="org-card">
+            <div class="org-card__avatar">AB</div>
+            <p class="org-card__name">Amara Boone</p>
+            <p class="org-card__title">VP, Distribution</p>
+            <div class="org-card__actions"><button>Phone</button><button>Email</button></div>
+          </div>
+          <div class="org-card">
+            <div class="org-card__avatar">TM</div>
+            <p class="org-card__name">Theo Marsh</p>
+            <p class="org-card__title">VP, Sales</p>
+            <div class="org-card__actions"><button>Phone</button><button>Email</button></div>
+          </div>
+          <div class="org-card org-card--locked">
+            <div class="org-card__lock">🔒</div>
+            <p class="org-card__name">Get the full picture</p>
+            <p class="org-card__title">Sign in to uncover key details.</p>
+            <button class="btn btn--primary btn--sm">Access More Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="panel-similar" role="tabpanel" aria-labelledby="tab-similar" hidden>
+        <h2 class="section__title section__title--tight">Compare Similar Companies to Northwind Supply Co.</h2>
+        <div class="table-wrap">
+          <table class="data-table" id="similarTable">
+            <thead>
+              <tr>
+                <th>Company</th><th>Revenue</th><th>Employees</th><th>Type</th><th>Founded</th><th>Top Executive</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Company"><strong>Northwind Supply Co.</strong></td>
+                <td data-label="Revenue">$412.6M</td>
+                <td data-label="Employees">5K+</td>
+                <td data-label="Type">Private</td>
+                <td data-label="Founded">1988</td>
+                <td data-label="Top Executive">Jordan Reyes, CFO</td>
+              </tr>
+              <tr>
+                <td data-label="Company">Cascade Industrial</td>
+                <td data-label="Revenue">$389.1M</td>
+                <td data-label="Employees">4K+</td>
+                <td data-label="Type">Private</td>
+                <td data-label="Founded">1975</td>
+                <td data-label="Top Executive">Priya Nair, CEO</td>
+              </tr>
+              <tr>
+                <td data-label="Company">Harborline Tools</td>
+                <td data-label="Revenue">$301.4M</td>
+                <td data-label="Employees">3K+</td>
+                <td data-label="Type">Public</td>
+                <td data-label="Founded">1962</td>
+                <td data-label="Top Executive">Marcus Webb, CEO</td>
+              </tr>
+              <tr>
+                <td data-label="Company">Fieldstone Supply</td>
+                <td data-label="Revenue">$276.9M</td>
+                <td data-label="Employees">2K+</td>
+                <td data-label="Type">Private</td>
+                <td data-label="Founded">1991</td>
+                <td data-label="Top Executive">Dana Okafor, CEO</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="panel-insights" role="tabpanel" aria-labelledby="tab-insights" hidden>
+        <h2 class="section__title section__title--tight">Company Profile Activity</h2>
+        <div class="card insight-card">
+          <p class="insight-card__caption">Among all Industrial Equipment companies</p>
+          <div class="gauge">
+            <div class="gauge__track"><div class="gauge__fill" style="--pct:38%"></div><div class="gauge__marker" style="--pct:38%"></div></div>
+            <div class="gauge__labels"><span>Low Activity</span><span>High Activity</span></div>
+          </div>
+          <p>Northwind Supply Co. is experiencing moderate activity levels compared to other companies in the Industrial Equipment sector.</p>
+        </div>
+
+        <h2 class="section__title section__title--tight faq-title">Frequently Asked Questions</h2>
+        <div class="accordion" id="faqAccordion">
+          <div class="accordion__item">
+            <button class="accordion__trigger" aria-expanded="true">
+              <span>What is Northwind Supply Co.'s revenue?</span>
+              <span class="accordion__icon">+</span>
+            </button>
+            <div class="accordion__panel">
+              <p>Northwind Supply Co.'s reported revenue is $412.6 million (placeholder figure).</p>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__trigger" aria-expanded="false">
+              <span>How many employees does Northwind Supply Co. have?</span>
+              <span class="accordion__icon">+</span>
+            </button>
+            <div class="accordion__panel" hidden>
+              <p>Northwind Supply Co. has approximately 5,000+ employees (placeholder figure).</p>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__trigger" aria-expanded="false">
+              <span>What industry is Northwind Supply Co. in?</span>
+              <span class="accordion__icon">+</span>
+            </button>
+            <div class="accordion__panel" hidden>
+              <p>Northwind Supply Co. is categorized under Industrial Equipment, Wholesale, and Logistics.</p>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__trigger" aria-expanded="false">
+              <span>Is Northwind Supply Co. a public company?</span>
+              <span class="accordion__icon">+</span>
+            </button>
+            <div class="accordion__panel" hidden>
+              <p>No, Northwind Supply Co. is privately held in this placeholder profile.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="tab-panel" id="panel-news" role="tabpanel" aria-labelledby="tab-news" hidden>
+        <h2 class="section__title section__title--tight">Northwind Supply Co. News & Media</h2>
+        <div class="news-grid">
+          <article class="news-card">
+            <div class="news-card__thumb" aria-hidden="true"></div>
+            <h3>Northwind opens fourth regional distribution hub</h3>
+            <p>The new facility is expected to cut delivery times for Pacific Northwest customers by a full day.</p>
+            <span class="news-card__source">placeholder-news.example</span>
+          </article>
+          <article class="news-card">
+            <div class="news-card__thumb" aria-hidden="true"></div>
+            <h3>Industrial distributors lean into route optimization software</h3>
+            <p>Northwind is among a wave of mid-size suppliers investing in fleet software this year.</p>
+            <span class="news-card__source">placeholder-trade.example</span>
+          </article>
+          <article class="news-card">
+            <div class="news-card__thumb" aria-hidden="true"></div>
+            <h3>Q2 outlook: steady demand across construction accounts</h3>
+            <p>Executives describe order volumes as consistent despite broader sector softness.</p>
+            <span class="news-card__source">placeholder-biz.example</span>
+          </article>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section container">
+    <h2 class="section__title">Employees by Management Level</h2>
+    <div class="level-list">
+      <div class="level-row level-row--total">
+        <span>Total Employees</span><strong>5K+</strong>
+      </div>
+      <div class="level-row">
+        <span>C-Level</span><strong>214</strong>
+        <button class="link-btn link-btn--sm">Quick View</button>
+      </div>
+      <div class="level-row">
+        <span>VP-Level</span><strong>386</strong>
+        <button class="link-btn link-btn--sm">Quick View</button>
+      </div>
+      <div class="level-row">
+        <span>Director</span><strong>1,540</strong>
+        <button class="link-btn link-btn--sm">Quick View</button>
+      </div>
+      <div class="level-row">
+        <span>Manager</span><strong>7,920</strong>
+        <button class="link-btn link-btn--sm">Quick View</button>
+      </div>
+      <div class="level-row">
+        <span>Non-Manager</span><strong>21,004</strong>
+        <button class="link-btn link-btn--sm">Quick View</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <h4>Popular Features</h4>
+      <a href="#top">Sales Solutions</a>
+      <a href="#top">Marketing Solutions</a>
+      <a href="#top">Company Contact Search</a>
+      <a href="#top">Buyer Intent Data</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="#top">About Us</a>
+      <a href="#top">Leadership</a>
+      <a href="#top">Careers</a>
+      <a href="#top">Contact Us</a>
+    </div>
+    <div class="footer-col">
+      <h4>B2B Database</h4>
+      <a href="#top">Our Data</a>
+      <a href="#top">Data Transparency</a>
+      <a href="#top">Company Search</a>
+      <a href="#top">People Search</a>
+    </div>
+    <div class="footer-col">
+      <h4>More Resources</h4>
+      <a href="#top">Videos</a>
+      <a href="#top">Newsroom</a>
+      <a href="#top">Engineering Blog</a>
+      <a href="#top">Privacy Center</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 DataGraph Placeholder LLC</span>
+    <div class="footer-bottom__links">
+      <a href="#top">Privacy Policy</a>
+      <a href="#top">Terms of Use</a>
+      <a href="#top">Status</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
